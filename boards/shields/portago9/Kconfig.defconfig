@@ -1,0 +1,6 @@
+if SHIELD_PORTAGO9
+
+config ZMK_KEYBOARD_NAME
+    default "portago9"
+
+endif

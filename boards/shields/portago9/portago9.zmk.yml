@@ -1,0 +1,10 @@
+file_format: "1"
+id: portago9
+name: portago9
+type: shield
+url: https://github.com/Helical11/zmk-config-portago
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - portago9
