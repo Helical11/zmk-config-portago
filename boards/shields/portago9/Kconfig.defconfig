@@ -1,4 +1,4 @@
-if SHIELD_MY_KEYBOARD_DONGLE
+if SHIELD_PORTAGO9_DONGLE
 
 config ZMK_KEYBOARD_NAME
     default "portago9"

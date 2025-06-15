@@ -6,3 +6,6 @@ url: https://github.com/Helical11/zmk-config-portago
 requires: [seeeduino_xiao_ble]
 features:
   - keys
+siblings:
+  - portago9
+  - portago9_dongle
