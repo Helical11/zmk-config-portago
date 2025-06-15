@@ -1,2 +1,4 @@
 config SHIELD_PORTAGO9
     def_bool $(shields_list_contains,portago9)
+config SHIELD_PORTAGO9_DONGLE
+    def_bool $(shields_list_contains,portago9_dongle)
