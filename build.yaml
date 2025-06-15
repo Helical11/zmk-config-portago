@@ -18,5 +18,8 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
-board: seeeduino_xiao_ble
-shield: portago9
+include:
+  - board: seeeduino_xiao_ble
+    shield: portago9
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
