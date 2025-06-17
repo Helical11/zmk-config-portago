@@ -1,7 +1,7 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: portago9
+    shield: portago9_body
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
 
   - board: seeeduino_xiao_ble
