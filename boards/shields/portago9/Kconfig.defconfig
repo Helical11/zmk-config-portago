@@ -19,3 +19,13 @@ config BT_MAX_PAIRED
     default 6
 
 endif
+
+if SHIELD_PORTAGO9_BODY
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+endif

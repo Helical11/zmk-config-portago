@@ -13,7 +13,7 @@ TARGET_RESET = ../zmk/app/build/reset/zephyr/zmk.uf2
 build: $(TARGET_BODY) $(TARGET_DONGLE) $(TARGET_RESET)
 
 $(TARGET_BODY): $(SRCS_BODY)
-	docker exec -w /workspaces/zmk/app -it $(container_name) west build -d build/body -b seeeduino_xiao_ble -- -DSHIELD=portago9_body -DZMK_CONFIG="/workspaces/zmk-config" -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+	docker exec -w /workspaces/zmk/app -it $(container_name) west build -d build/body -b seeeduino_xiao_ble -- -DSHIELD=portago9_body -DZMK_CONFIG="/workspaces/zmk-config"
 	docker exec -w /workspaces/zmk/app -it $(container_name) cp build/body/zephyr/zmk.uf2 /workspaces/zmk-config/portago9_body.uf2
 
 $(TARGET_DONGLE): $(SRCS_DONGLE)
