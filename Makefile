@@ -13,7 +13,7 @@ TARGET_RESET = ../zmk/app/build/reset/zephyr/zmk.uf2
 build: $(TARGET_BODY) $(TARGET_DONGLE) $(TARGET_RESET)
 
 $(TARGET_BODY): $(SRCS_BODY)
-	docker exec -w /workspaces/zmk/app -it $(container_name) west build -d build/body -b seeeduino_xiao_ble -- -DSHIELD=portago9_body -DZMK_CONFIG="/workspaces/zmk-config"
+	docker exec -w /workspaces/zmk/app -it $(container_name) west build -d build/body -b seeeduino_xiao_ble -- -DSHIELD="portago9_body rgbled_adapter" -DZMK_CONFIG="/workspaces/zmk-config" -DZMK_EXTRA_MODULES="/workspaces/zmk-modules/zmk-rgbled-widget"
 	docker exec -w /workspaces/zmk/app -it $(container_name) cp build/body/zephyr/zmk.uf2 /workspaces/zmk-config/portago9_body.uf2
 
 $(TARGET_DONGLE): $(SRCS_DONGLE)
